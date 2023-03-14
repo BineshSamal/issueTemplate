@@ -1,6 +1,6 @@
 name: 🚀 Feature Request
 description: Suggest a new feature or improvement
-title: "[Feature Request]: "
+title: "[Feature]: "
 labels: [enhancement]
 assignees:
   - selefra-bot
@@ -41,7 +41,7 @@ body:
       placeholder: "This feature would make it easier for users to..."
     validations:
       required: true
-  - type: select
+  - type: radio
     id: priority
     attributes:
       label: Priority
@@ -55,10 +55,10 @@ body:
           value: High
         - label: Critical
           value: Critical
-      placeholder: Select a priority
+      default: Low
     validations:
       required: true
-  - type: checkbox
+  - type: confirm
     id: notify-me
     attributes:
       label: Notification
