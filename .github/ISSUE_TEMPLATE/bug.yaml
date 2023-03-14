@@ -25,27 +25,21 @@ body:
       placeholder: 0.0.5
     validations:
       required: true
-  - type: dropdown
-    id: reappearance
+  - type: textarea
+    id: what-happened
     attributes:
-      label: Does it still exist
-      description: Is it possible to reproduce this bug in the main branch?
-      options:
-        - "Yes"
-        - "No"
-        - "Not Tested"
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
   - type: textarea
-    id: desc
+    id: logs
     attributes:
-      label: bug description
-      description: Please briefly describe the bug and how to reproduce it.
-      placeholder: |
-        1. First...
-        2. Then...
-    validations:
-      required: true
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
   - type: textarea
     id: advise
     attributes:
