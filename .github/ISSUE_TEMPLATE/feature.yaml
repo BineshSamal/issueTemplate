@@ -1,14 +1,14 @@
-name: 🚀 Feature request
-description: Suggest a new feature for selefra
-title: "[Feature]: "
-labels: [feature]
+name: 🚀 Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature Request]: "
+labels: [enhancement]
 assignees:
   - selefra-bot
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting a new feature for selefra!
+        Thanks for submitting a feature request! Please fill out the details below to help us understand your suggestion.
   - type: input
     id: contact
     attributes:
@@ -17,30 +17,50 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: problem
+  - type: input
+    id: summary
     attributes:
-      label: What problem are you trying to solve?
-      description: Please describe the problem you're trying to solve and why it's important.
-      placeholder: "I need to be able to..."
-      value: ""
+      label: Summary
+      description: Briefly describe the feature you are requesting.
+      placeholder: ex. "Add support for custom themes"
     validations:
       required: true
   - type: textarea
-    id: solution
+    id: description
     attributes:
-      label: Proposed solution
-      description: How do you propose we solve the problem?
-      placeholder: "We should be able to..."
-      value: ""
+      label: Description
+      description: Provide a detailed description of the feature, including any relevant use cases or scenarios.
+      placeholder: "As a user, I would like to be able to..."
     validations:
       required: true
   - type: textarea
-    id: alternatives
+    id: benefit
     attributes:
-      label: Alternative solutions
-      description: Are there any other solutions you've considered?
-      placeholder: "One alternative could be to..."
-      value: ""
+      label: Benefit
+      description: Explain how this feature would benefit other users or improve the overall experience.
+      placeholder: "This feature would make it easier for users to..."
     validations:
-      required: false
+      required: true
+  - type: select
+    id: priority
+    attributes:
+      label: Priority
+      description: Select the priority of this feature request.
+      options:
+        - label: Low
+          value: Low
+        - label: Medium
+          value: Medium
+        - label: High
+          value: High
+        - label: Critical
+          value: Critical
+      placeholder: Select a priority
+    validations:
+      required: true
+  - type: checkbox
+    id: notify-me
+    attributes:
+      label: Notification
+      description: Check this box if you want to be notified of updates to this feature request.
+      default: true
