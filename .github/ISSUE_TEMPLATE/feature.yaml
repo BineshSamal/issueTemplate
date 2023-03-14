@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
         Thanks for submitting a feature request! Please fill out the details below to help us understand your suggestion.
-    - type: dropdown
+  - type: dropdown
     id: Priority
     attributes:
       label: Priority
