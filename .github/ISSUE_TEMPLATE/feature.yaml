@@ -9,6 +9,18 @@ body:
     attributes:
       value: |
         Thanks for submitting a feature request! Please fill out the details below to help us understand your suggestion.
+    - type: dropdown
+    id: Priority
+    attributes:
+      label: Priority
+      description: Select the priority of this feature request.
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
   - type: input
     id: contact
     attributes:
@@ -39,17 +51,5 @@ body:
       label: Benefit
       description: Explain how this feature would benefit other users or improve the overall experience.
       placeholder: "This feature would make it easier for users to..."
-    validations:
-      required: true
-  - type: dropdown
-    id: Priority
-    attributes:
-      label: Priority
-      description: Select the priority of this feature request.
-      options:
-        - Low
-        - Medium
-        - High
-        - Critical
     validations:
       required: true
