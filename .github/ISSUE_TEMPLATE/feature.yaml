@@ -41,26 +41,13 @@ body:
       placeholder: "This feature would make it easier for users to..."
     validations:
       required: true
-  - type: radio
-    id: priority
+  - type: dropdown
+    id: version
     attributes:
-      label: Priority
-      description: Select the priority of this feature request.
+      label: Version
+      description: What version of our software are you running?
       options:
-        - label: Low
-          value: Low
-        - label: Medium
-          value: Medium
-        - label: High
-          value: High
-        - label: Critical
-          value: Critical
-      default: Low
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
     validations:
       required: true
-  - type: confirm
-    id: notify-me
-    attributes:
-      label: Notification
-      description: Check this box if you want to be notified of updates to this feature request.
-      default: true
