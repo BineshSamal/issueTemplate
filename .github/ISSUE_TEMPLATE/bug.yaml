@@ -1,9 +1,9 @@
-name: Bug Report
-description: File a bug report
+name: 🐛 Bug report
+description: Report a bug to help us improve selefra
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: [bug]
 assignees:
-  - octocat
+  - selefra-bot
 body:
   - type: markdown
     attributes:
@@ -17,46 +17,37 @@ body:
       placeholder: ex. email@example.com
     validations:
       required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
+  - type: input
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: selefra version
+      description: Please enter the project version you are currently using?
+      placeholder: 0.0.5
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: reappearance
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: Does it still exist
+      description: Is it possible to reproduce this bug in the main branch?
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - "Yes"
+        - "No"
+        - "Not Tested"
+    validations:
+      required: true
   - type: textarea
-    id: logs
+    id: desc
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
+      label: bug description
+      description: Please briefly describe the bug and how to reproduce it.
+      placeholder: |
+        1. First...
+        2. Then...
+    validations:
+      required: true
+  - type: textarea
+    id: advise
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: Proposed changes
+      description: You can provide us with good suggestions or modification plans.
