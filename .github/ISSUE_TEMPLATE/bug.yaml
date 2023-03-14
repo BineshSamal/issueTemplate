@@ -20,7 +20,7 @@ body:
   - type: input
     id: version
     attributes:
-      label: selefra version
+      label: Version
       description: Please enter the project version you are currently using?
       placeholder: 0.0.5
     validations:
