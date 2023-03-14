@@ -1,0 +1,46 @@
+name: 🚀 Feature request
+description: Suggest a new feature for selefra
+title: "[Feature]: "
+labels: [feature]
+assignees:
+  - selefra-bot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature for selefra!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Please describe the problem you're trying to solve and why it's important.
+      placeholder: "I need to be able to..."
+      value: ""
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How do you propose we solve the problem?
+      placeholder: "We should be able to..."
+      value: ""
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative solutions
+      description: Are there any other solutions you've considered?
+      placeholder: "One alternative could be to..."
+      value: ""
+    validations:
+      required: false
